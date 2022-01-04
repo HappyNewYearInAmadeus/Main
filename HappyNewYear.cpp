@@ -12,20 +12,21 @@ Initial version: Fabien Felix
 #include <random>
 using namespace std;
 
-const bool goodResolutions = false;         // It was set to true in previous releases but the QA manager rejected it was blocking the test scenario 'reallife_2021'. 
+const bool goodResolutions = false;         // It was set to true in previous releases but the QA manager rejected it as it was blocking the test scenario 'reallife_2021'. 
                                             // Ref PTR#1000390
 
 const bool funAtWork = true;                // you can set it to false but the the code might crash
 
-const bool enjoyInAmadeus = true;           // I changed into a constant, as the initial complex function to compute it was always returning 'true' and I want to save CPU - and CO2 :) ...
-                                            // As it is used a bit everywhere in the code, its less risky to not remove it (and I have to deliver my user story in rush). 
-                                            // The maintenance team will cleanup ... 
+const bool enjoyInAmadeus = true;           /* I changed it into a constant, as the initial complex function to compute it was always returning 'true' 
+                                            and I want to save CPU - and CO2 :) 
+                                            As it is used a bit everywhere in the code, its less risky to not remove it 
+                                            and I have to deliver my user story in rush. The maintenance team will cleanup ... */
                                             
-int noMoreCovid;                            // I tried to use the Data plateform with AI/ML to forecast this boolean an intelligent way, 
-                                            // but after several months in prod the customers were complaining about it. 
-                                            // So, let's put a random, nobody will notice the difference
+int noMoreCovid;                            /* I tried to use the Data plateform with AI/ML to forecast this boolean an intelligent way, 
+                                             but after several months in prod the customers were complaining about it. 
+                                             So, let's put a random, they wont notice the difference */
 
-bool vaccinationDone = true;                // All OK
+bool vaccinationDone = true;                // All OK. To be replaced as a constant in future release hopefully
 
 
 int main()
@@ -44,7 +45,7 @@ int main()
         noMoreCovid=rand() %2; // mostly random, as the covid forecasts
        
         if (noMoreCovid || vaccinationDone )    cout<<"Book your next vacation flight NOW\n";
-        else                                    cout<<"\n Keep your money for future travel";
+        else                                    cout<<"Keep your money for future travel\n";
         
         if (!funAtWork) exit(-1);
         else // to be completed in next PIs
