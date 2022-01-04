@@ -2,7 +2,7 @@
 This is my first C++ code of the 2022 year
 Initial version: Fabien Felix
 
-==>> Contribute to the code on github: https://github.com/HappyNewYearInAmadeus/blob/main/happyNewYear.cpp
+==>> Contribute to the code on github: https://github.com/HappyNewYearInAmadeus/Main/blob/main/HappyNewYear.cpp
 
 Test it with the online compiler: https://www.onlinegdb.com/online_c++_compiler
 *******************************************************************************/
